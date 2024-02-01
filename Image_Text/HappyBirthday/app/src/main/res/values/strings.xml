@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="생일_축하">Happy BirthDay Sam!</string>
+    <string name="발신자">발신자</string>
+</resources>
