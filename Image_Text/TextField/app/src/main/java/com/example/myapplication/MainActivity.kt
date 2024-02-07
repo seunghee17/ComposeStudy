@@ -34,29 +34,23 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent{
-//            val textValue = remember{
-//                mutableStateOf("")
-//            }
-            //구조 분해 기법
             val (text, setValue) = remember{
                 mutableStateOf("")
             }
+
             val scaffoldState = remember{SnackbarHostState()}
             val scope = rememberCoroutineScope()
             val keyboardController = LocalSoftwareKeyboardController.current
 
            Scaffold(
-               //이게 무엇?
                snackbarHost = {SnackbarHost(scaffoldState)}
            ){
                Column(
-                   //화면에 꽉 채운다
                    modifier = Modifier.fillMaxSize(),
                    verticalArrangement = Arrangement.Center,
                    horizontalAlignment = Alignment.CenterHorizontally,
                ){
                    TextField(
-                       //이 값은 동적으로 변하게 만들어야함
                        value= text,
                        onValueChange = setValue,
                    )
