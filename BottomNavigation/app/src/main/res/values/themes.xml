@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.BottomNavigation" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.MySplashScreen" parent="Theme.SplashScreen">
+        <!--Splash 화면의 백그라운드 컬러 지정-->
+        <item name="windowSplashScreenBackground">@color/orange_100</item>
+        <!--Splash 화면의 중앙에 위치할 아이콘 지정-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <!--Splash 화면의 나타나는 시간 지정-->
+        <item name="windowSplashScreenAnimationDuration">5000</item>
+        <item name="postSplashScreenTheme">@style/Theme.SplashScreenJC</item>
+    </style>
+    <style name="Theme.SplashScreenJC" parent="android:Theme.Material.NoActionBar"/>
+</resources>
